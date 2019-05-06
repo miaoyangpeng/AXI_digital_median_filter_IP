@@ -1,0 +1,541 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<bd:repository xmlns:bd="http://www.xilinx.com/bd" bd:BoundaryCRC="0x3318B81644570C76" bd:device="xc7z020clg484-1" bd:isValidated="true" bd:synthFlowMode="Hierarchical" bd:tool_version="2018.2" bd:top="block_ram" bd:version="1.00.a">
+
+  <spirit:component xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
+    <spirit:vendor>xilinx.com</spirit:vendor>
+    <spirit:library>BlockDiagram</spirit:library>
+    <spirit:name>block_ram</spirit:name>
+    <spirit:version>1.00.a</spirit:version>
+    <spirit:parameters>
+      <spirit:parameter>
+        <spirit:name>isTop</spirit:name>
+        <spirit:value spirit:format="bool" spirit:resolve="immediate">true</spirit:value>
+      </spirit:parameter>
+    </spirit:parameters>
+    <spirit:busInterfaces>
+      <spirit:busInterface>
+        <spirit:name>RST.SRST</spirit:name>
+        <spirit:displayName>Reset</spirit:displayName>
+        <spirit:description>Reset</spirit:description>
+        <spirit:busType spirit:library="signal" spirit:name="reset" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:abstractionType spirit:library="signal" spirit:name="reset_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:slave/>
+        <spirit:portMaps>
+          <spirit:portMap>
+            <spirit:logicalPort>
+              <spirit:name>RST</spirit:name>
+            </spirit:logicalPort>
+            <spirit:physicalPort>
+              <spirit:name>srst</spirit:name>
+            </spirit:physicalPort>
+          </spirit:portMap>
+        </spirit:portMaps>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>POLARITY</spirit:name>
+            <spirit:value>ACTIVE_HIGH</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="user"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:busInterface>
+      <spirit:busInterface>
+        <spirit:name>CLK.CLK</spirit:name>
+        <spirit:displayName>Clk</spirit:displayName>
+        <spirit:description>Clock</spirit:description>
+        <spirit:busType spirit:library="signal" spirit:name="clock" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:abstractionType spirit:library="signal" spirit:name="clock_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:slave/>
+        <spirit:portMaps>
+          <spirit:portMap>
+            <spirit:logicalPort>
+              <spirit:name>CLK</spirit:name>
+            </spirit:logicalPort>
+            <spirit:physicalPort>
+              <spirit:name>clk</spirit:name>
+            </spirit:physicalPort>
+          </spirit:portMap>
+        </spirit:portMaps>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>FREQ_HZ</spirit:name>
+            <spirit:value>100000000</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="default"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>PHASE</spirit:name>
+            <spirit:value>0.000</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="default"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>CLK_DOMAIN</spirit:name>
+            <spirit:value>block_ram_clk</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="default"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:busInterface>
+    </spirit:busInterfaces>
+    <spirit:model>
+      <spirit:views>
+        <spirit:view>
+          <spirit:name>BlockDiagram</spirit:name>
+          <spirit:envIdentifier>:vivado.xilinx.com:</spirit:envIdentifier>
+          <spirit:hierarchyRef spirit:library="BlockDiagram" spirit:name="block_ram_imp" spirit:vendor="xilinx.com" spirit:version="1.00.a"/>
+        </spirit:view>
+      </spirit:views>
+      <spirit:ports>
+        <spirit:port>
+          <spirit:name>srst</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>clk</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>full_0</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>din_0</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+            <spirit:vector>
+              <spirit:left>7</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>wr_en_0</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>empty_0</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>dout_0</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+            <spirit:vector>
+              <spirit:left>7</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>rd_en_0</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>full_1</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>din_1</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+            <spirit:vector>
+              <spirit:left>7</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>wr_en_1</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>empty_1</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>dout_1</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+            <spirit:vector>
+              <spirit:left>7</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>rd_en_1</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>full_2</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>din_2</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+            <spirit:vector>
+              <spirit:left>7</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>wr_en_2</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>empty_2</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>dout_2</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+            <spirit:vector>
+              <spirit:left>7</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>rd_en_2</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>full_3</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>din_3</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+            <spirit:vector>
+              <spirit:left>7</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>wr_en_3</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>empty_3</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>dout_3</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+            <spirit:vector>
+              <spirit:left>7</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>rd_en_3</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>almost_empty_1</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>almost_empty_0</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>almost_empty_2</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>almost_empty_3</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+      </spirit:ports>
+    </spirit:model>
+  </spirit:component>
+
+  <spirit:design xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
+    <spirit:vendor>xilinx.com</spirit:vendor>
+    <spirit:library>BlockDiagram</spirit:library>
+    <spirit:name>block_ram_imp</spirit:name>
+    <spirit:version>1.00.a</spirit:version>
+    <spirit:componentInstances>
+      <spirit:componentInstance>
+        <spirit:instanceName>fifo_generator_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="fifo_generator" spirit:vendor="xilinx.com" spirit:version="13.2"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">block_ram_fifo_generator_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Input_Data_Width">8</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Output_Data_Width">8</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Use_Embedded_Registers">false</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Reset_Pin">true</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Reset_Type">Synchronous_Reset</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Use_Dout_Reset">true</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Almost_Empty_Flag">true</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>fifo_generator_1</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="fifo_generator" spirit:vendor="xilinx.com" spirit:version="13.2"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">block_ram_fifo_generator_0_1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Input_Data_Width">8</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Output_Data_Width">8</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Use_Embedded_Registers">false</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Reset_Pin">true</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Reset_Type">Synchronous_Reset</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Use_Dout_Reset">true</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Almost_Empty_Flag">true</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>fifo_generator_2</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="fifo_generator" spirit:vendor="xilinx.com" spirit:version="13.2"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">block_ram_fifo_generator_0_2</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Input_Data_Width">8</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Output_Data_Width">8</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Use_Embedded_Registers">false</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Reset_Pin">true</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Reset_Type">Synchronous_Reset</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Use_Dout_Reset">true</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Almost_Empty_Flag">true</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>fifo_generator_3</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="fifo_generator" spirit:vendor="xilinx.com" spirit:version="13.2"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">block_ram_fifo_generator_0_3</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Input_Data_Width">8</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Output_Data_Width">8</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Use_Embedded_Registers">false</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Reset_Pin">true</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Reset_Type">Synchronous_Reset</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Use_Dout_Reset">true</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Almost_Empty_Flag">true</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+    </spirit:componentInstances>
+    <spirit:adHocConnections>
+      <spirit:adHocConnection>
+        <spirit:name>Net</spirit:name>
+        <spirit:externalPortReference spirit:portRef="clk"/>
+        <spirit:internalPortReference spirit:componentRef="fifo_generator_0" spirit:portRef="clk"/>
+        <spirit:internalPortReference spirit:componentRef="fifo_generator_2" spirit:portRef="clk"/>
+        <spirit:internalPortReference spirit:componentRef="fifo_generator_1" spirit:portRef="clk"/>
+        <spirit:internalPortReference spirit:componentRef="fifo_generator_3" spirit:portRef="clk"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>fifo_generator_0_full</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="fifo_generator_0" spirit:portRef="full"/>
+        <spirit:externalPortReference spirit:portRef="full_0"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>din_0_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="din_0"/>
+        <spirit:internalPortReference spirit:componentRef="fifo_generator_0" spirit:portRef="din"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>wr_en_0_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="wr_en_0"/>
+        <spirit:internalPortReference spirit:componentRef="fifo_generator_0" spirit:portRef="wr_en"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>fifo_generator_0_empty</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="fifo_generator_0" spirit:portRef="empty"/>
+        <spirit:externalPortReference spirit:portRef="empty_0"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>fifo_generator_0_dout</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="fifo_generator_0" spirit:portRef="dout"/>
+        <spirit:externalPortReference spirit:portRef="dout_0"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>rd_en_0_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="rd_en_0"/>
+        <spirit:internalPortReference spirit:componentRef="fifo_generator_0" spirit:portRef="rd_en"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>fifo_generator_1_full</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="fifo_generator_1" spirit:portRef="full"/>
+        <spirit:externalPortReference spirit:portRef="full_1"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>din_1_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="din_1"/>
+        <spirit:internalPortReference spirit:componentRef="fifo_generator_1" spirit:portRef="din"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>wr_en_1_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="wr_en_1"/>
+        <spirit:internalPortReference spirit:componentRef="fifo_generator_1" spirit:portRef="wr_en"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>fifo_generator_1_empty</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="fifo_generator_1" spirit:portRef="empty"/>
+        <spirit:externalPortReference spirit:portRef="empty_1"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>fifo_generator_1_dout</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="fifo_generator_1" spirit:portRef="dout"/>
+        <spirit:externalPortReference spirit:portRef="dout_1"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>rd_en_1_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="rd_en_1"/>
+        <spirit:internalPortReference spirit:componentRef="fifo_generator_1" spirit:portRef="rd_en"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>fifo_generator_2_full</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="fifo_generator_2" spirit:portRef="full"/>
+        <spirit:externalPortReference spirit:portRef="full_2"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>din_2_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="din_2"/>
+        <spirit:internalPortReference spirit:componentRef="fifo_generator_2" spirit:portRef="din"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>wr_en_2_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="wr_en_2"/>
+        <spirit:internalPortReference spirit:componentRef="fifo_generator_2" spirit:portRef="wr_en"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>fifo_generator_2_empty</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="fifo_generator_2" spirit:portRef="empty"/>
+        <spirit:externalPortReference spirit:portRef="empty_2"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>fifo_generator_2_dout</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="fifo_generator_2" spirit:portRef="dout"/>
+        <spirit:externalPortReference spirit:portRef="dout_2"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>rd_en_2_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="rd_en_2"/>
+        <spirit:internalPortReference spirit:componentRef="fifo_generator_2" spirit:portRef="rd_en"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>fifo_generator_3_full</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="fifo_generator_3" spirit:portRef="full"/>
+        <spirit:externalPortReference spirit:portRef="full_3"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>din_3_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="din_3"/>
+        <spirit:internalPortReference spirit:componentRef="fifo_generator_3" spirit:portRef="din"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>wr_en_3_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="wr_en_3"/>
+        <spirit:internalPortReference spirit:componentRef="fifo_generator_3" spirit:portRef="wr_en"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>fifo_generator_3_empty</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="fifo_generator_3" spirit:portRef="empty"/>
+        <spirit:externalPortReference spirit:portRef="empty_3"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>fifo_generator_3_dout</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="fifo_generator_3" spirit:portRef="dout"/>
+        <spirit:externalPortReference spirit:portRef="dout_3"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>rd_en_3_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="rd_en_3"/>
+        <spirit:internalPortReference spirit:componentRef="fifo_generator_3" spirit:portRef="rd_en"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>fifo_generator_1_almost_empty</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="fifo_generator_1" spirit:portRef="almost_empty"/>
+        <spirit:externalPortReference spirit:portRef="almost_empty_1"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>fifo_generator_0_almost_empty</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="fifo_generator_0" spirit:portRef="almost_empty"/>
+        <spirit:externalPortReference spirit:portRef="almost_empty_0"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>fifo_generator_2_almost_empty</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="fifo_generator_2" spirit:portRef="almost_empty"/>
+        <spirit:externalPortReference spirit:portRef="almost_empty_2"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>fifo_generator_3_almost_empty</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="fifo_generator_3" spirit:portRef="almost_empty"/>
+        <spirit:externalPortReference spirit:portRef="almost_empty_3"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>srst_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="srst"/>
+        <spirit:internalPortReference spirit:componentRef="fifo_generator_1" spirit:portRef="srst"/>
+        <spirit:internalPortReference spirit:componentRef="fifo_generator_3" spirit:portRef="srst"/>
+        <spirit:internalPortReference spirit:componentRef="fifo_generator_2" spirit:portRef="srst"/>
+        <spirit:internalPortReference spirit:componentRef="fifo_generator_0" spirit:portRef="srst"/>
+      </spirit:adHocConnection>
+    </spirit:adHocConnections>
+  </spirit:design>
+
+</bd:repository>
