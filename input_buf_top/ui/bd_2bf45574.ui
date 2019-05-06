@@ -1,0 +1,52 @@
+{
+   ExpandedHierarchyInLayout: "",
+   guistr: "# # String gsaved with Nlview 6.8.5  2018-01-30 bk=1.4354 VDI=40 GEI=35 GUI=JA:1.6 non-TLS
+#  -string -flagsOSRD
+preplace port clk -pg 1 -y 100 -defaultsOSRD
+preplace portBus dout_b_3 -pg 1 -y 1920 -defaultsOSRD
+preplace portBus dout_a_1 -pg 1 -y 320 -defaultsOSRD
+preplace portBus dout_a_2 -pg 1 -y 340 -defaultsOSRD
+preplace portBus wr_en_b_1 -pg 1 -y 1120 -defaultsOSRD
+preplace portBus rd_add_a -pg 1 -y 200 -defaultsOSRD
+preplace portBus dout_a_3 -pg 1 -y 660 -defaultsOSRD
+preplace portBus wr_en_b_2 -pg 1 -y 1440 -defaultsOSRD
+preplace portBus rd_add_b -pg 1 -y 1460 -defaultsOSRD
+preplace portBus wr_en_b_3 -pg 1 -y 1760 -defaultsOSRD
+preplace portBus wr_en_a_1 -pg 1 -y 160 -defaultsOSRD
+preplace portBus wr_en_a_2 -pg 1 -y 500 -defaultsOSRD
+preplace portBus wr_add_a -pg 1 -y 220 -defaultsOSRD
+preplace portBus wr_en_a_3 -pg 1 -y 820 -defaultsOSRD
+preplace portBus wr_add_b -pg 1 -y 1140 -defaultsOSRD
+preplace portBus din_a -pg 1 -y 120 -defaultsOSRD
+preplace portBus din_b -pg 1 -y 1160 -defaultsOSRD
+preplace portBus dout_b_1 -pg 1 -y 1280 -defaultsOSRD
+preplace portBus dout_b_2 -pg 1 -y 1600 -defaultsOSRD
+preplace inst blk_mem_gen_1 -pg 1 -lvl 2 -y 160 -defaultsOSRD
+preplace inst blk_mem_gen_2 -pg 1 -lvl 2 -y 1120 -defaultsOSRD
+preplace inst blk_mem_gen_3 -pg 1 -lvl 2 -y 500 -defaultsOSRD
+preplace inst blk_mem_gen_4 -pg 1 -lvl 2 -y 1440 -defaultsOSRD
+preplace inst blk_mem_gen_5 -pg 1 -lvl 2 -y 820 -defaultsOSRD
+preplace inst blk_mem_gen_6 -pg 1 -lvl 2 -y 1760 -defaultsOSRD
+preplace netloc Net4 1 0 2 NJ 200 140
+preplace netloc dina_0_1 1 0 2 NJ 1160 150
+preplace netloc clka_0_1 1 0 2 NJ 100 130
+preplace netloc blk_mem_gen_1_doutb 1 1 2 170 320 NJ
+preplace netloc blk_mem_gen_2_doutb 1 1 2 170 1280 NJ
+preplace netloc wea_0_1 1 0 2 NJ 160 NJ
+preplace netloc wea_0_2 1 0 2 NJ 500 NJ
+preplace netloc wr_add 1 0 2 NJ 220 160
+preplace netloc wea_0_3 1 0 2 NJ 820 NJ
+preplace netloc blk_mem_gen_6_doutb 1 1 2 170 1920 NJ
+preplace netloc blk_mem_gen_4_doutb 1 1 2 170 1600 NJ
+preplace netloc wea_0_4 1 0 2 NJ 1440 NJ
+preplace netloc blk_mem_gen_5_doutb 1 1 2 170 660 NJ
+preplace netloc blk_mem_gen_3_doutb 1 1 2 170 340 NJ
+preplace netloc wea_0_5 1 0 2 NJ 1760 NJ
+preplace netloc Net 1 0 2 NJ 1460 160
+preplace netloc addra_0_1 1 0 2 NJ 1140 140
+preplace netloc wea_1_1 1 0 2 NJ 1120 NJ
+preplace netloc Net2 1 0 2 NJ 120 120
+levelinfo -pg 1 0 100 340 460 -top 0 -bot 1940
+",
+}
+0
