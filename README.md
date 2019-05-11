@@ -70,7 +70,7 @@ and then, package it as a new IP and replce the “AXI4-Stream Data FIFO” IP i
 
 ## make a C program for doing image median filtering 
 
-for letting the can do image median filtering function, first, you need to transfer the image into .BMP format, AS .bmp format is not compress.
+for letting the can do image median filtering function, first, you need to transfer the image into .BMP format with **24-bit depth**, AS .bmp format is not compress.
 then is the operation like the following image
 
 ![](image/75.PNG) 
