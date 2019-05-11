@@ -83,13 +83,13 @@ The output of Sorting Networks’ data will go to an output FIFO. This FIFO will
 Figure 7: basic structure about the image filter IP core
 
 ![](image/24.PNG) 
-Figure 8:
+Figure 8: working principle of “DATA input BUFFER”
 
 ![](image/25.PNG) 
-Figure 9:
+Figure 9: “DATA input BUFFER” next operation after Figure 8
 
 ![](image/26.PNG) 
-Figure 10:
+Figure 10: “DATA input BUFFER” after filling the third line, the fourth line pixel data of input image will go to BUFFER first line
 
 # LICENSE
 
