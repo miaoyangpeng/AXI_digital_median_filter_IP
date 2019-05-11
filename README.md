@@ -48,11 +48,11 @@ for Linux OS, some very good C DMA channel driver and example programs are provi
 https://github.com/bperez77/xilinx_axidma (Link 1)
 it also explains how to make necessary files, especially it explains the device tree.
 
-a chinese website : https://blog.csdn.net/long_fly/article/details/80482248  also very useful. it explains how to establish Linux OS in PS side and how to use the DMA channel driver and example in (Link 1) step by step, very easy to understand.
+a chinese website : https://blog.csdn.net/long_fly/article/details/80482248  also very useful. it explains how to establish Linux OS in PS side and how to use the DMA channel driver and example in ![Link 1 ](https://github.com/bperez77/xilinx_axidma) step by step, very easy to understand.
 
 ### result
 
-until now, if you can use the "axidma_benchmark" in (Link 1) and get the result similar with following result, means your DMA channels communication environment can run properly:
+until now, if you can use the "axidma_benchmark" in ![Link 1 ](https://github.com/bperez77/xilinx_axidma) and get the result similar with following result, means your DMA channels communication environment can run properly:
 ![](image/91.PNG) 
 Figure 4: running result of “axidma_benchmark”
 
@@ -73,7 +73,7 @@ and then, package it as a new IP and replce the “AXI4-Stream Data FIFO” IP i
 for letting the can do image median filtering function, first, you need to transfer the image into .BMP format, AS .bmp format is not compress.
 then is the operation like the following image
 
-![](image/77.PNG) 
+![](image/75.PNG) 
 
 you can do the DMA transmit and receive by “axidma_transfer” in the ![Link 1 ](https://github.com/bperez77/xilinx_axidma) mentioned above. 
 
