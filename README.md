@@ -11,6 +11,7 @@ Figure 1: overview diagram of final system
 Processing System (PS) side is reponsible to transmit and receive image data via DMA channels. A hardware digital image filter is done in Programmable Logic (PL) side. Direct memory access (DMA) channels are established for high speed data exchange between PS side and PL side. 
 
 **the structure and working principle of this IP core will be explain at the end of this file.**
+**every VHDL file name and block design name can not fully stand for its funtion, please refer to the "Design Name" in the beginning of each file**
 
 ## Establishing DMA channels communication environment
 
