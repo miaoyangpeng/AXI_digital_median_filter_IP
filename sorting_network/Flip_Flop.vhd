@@ -1,6 +1,6 @@
 ----------------------------------------------------------------------------------
 -- Author: Yangpeng Miao
--- Design Name: 8-bit flip flop
+-- Design Name: 8-bit register
 -- Module Name: Flip_Flop - Behavioral
 -- Description: 
 -- 
