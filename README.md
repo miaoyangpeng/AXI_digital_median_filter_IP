@@ -68,6 +68,17 @@ for finishing this task, you should create a new Vivado project first, and add a
 Figure 6: IP source structure 
 and then, package it as a new IP and replce the “AXI4-Stream Data FIFO” IP in figure 3.
 
+## make a C program for doing image median filtering 
+
+for letting the can do image median filtering function, first, you need to transfer the image into .BMP format, AS .bmp format is not compress.
+then is the operation like the following image
+
+![](image/77.PNG) 
+
+you can do the DMA transmit and receive by “axidma_transfer” in the ![Link 1 ](https://github.com/bperez77/xilinx_axidma) mentioned above. 
+
+you can do the cutting header operation by modify “axidma_transfer.c” and "util.c" files, or do you by hand.
+
 ## structure and working principle of this image filter IP
 
 Figure 7 shows the basic structure about the Digital Image Filter IP. As this IP core receives data from “AXI DMA” IP and needs to send data back to DMA channel through “AXI DMA” IP as well, Digital Image Filter IP must be compatible with AXI4-stream protocol. “AXI receiver” and “AXI sender” models are responsible for the compatibility.
