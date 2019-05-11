@@ -5,24 +5,30 @@ it is an image filter IP core based on Xilinx ZYNQ SOC, Using hardware 3x3 media
 
 a possible usage diagram can be as following, and this design is the "Digital Image Filter" model in the following diagram
 
-![](image/32.PNG)
+![](image/32.PNG) 
 Figure 1: overview diagram of final system
 
 Processing System (PS) side is reponsible to transmit and receive image data via DMA channels. A hardware digital image filter is done in Programmable Logic (PL) side. Direct memory access (DMA) channels are established for high speed data exchange between PS side and PL side. 
 
+**the structure and working principle of this IP core will be explain at the end of this file.**
+
 ## Establishing DMA channels communication environment
+
+### PL
 
 for establishing a environment for this IP code,first of all, we can use “AXI4-Stream Data FIFO” IP (provided by Vivado) to replace this IP, to check DMA channels. we must make sure DMA channels (read and write) can run properly first, then replace the “AXI4-Stream Data FIFO” IP into this median filter IP.
 so, privious diagram can be changed into following diagram first
 
-![](image/58.PNG)
+![](image/58.PNG) 
 Figuire 2: diagram of replacing the “Digital Image Filter” IP for checking DMA channels communication
 
 PL side hardware diagram design procedure in Vivado can refer to http://www.fpgadeveloper.com/2014/08/using-the-axi-dma-in-vivado.html
 in “AXI Direct Memory Access” IP setting,	Make sure “Enable Scatter Gather Engine” is checked
 the diagram will looks like following:
-![](image/77.PNG)
+![](image/77.PNG) 
 Figuire 3: hardware diagram in Vivado
+
+### PS
 
 I am not going to talk about how to establish the environment in PS side. But in short, the following files are required:
 •	BOOT.BIN (boot image, contains First Stage Boot Loader (FSBL), bitstream and u-boot.elf)
@@ -43,18 +49,47 @@ it also explains how to make necessary files, especially it explains the device 
 
 a chinese website : https://blog.csdn.net/long_fly/article/details/80482248  also very useful. it explains how to establish Linux OS in PS side and how to use the DMA channel driver and example in (Link 1) step by step, very easy to understand.
 
+### result
+
 until now, if you can use the "axidma_benchmark" in (Link 1) and get the result similar with following result, means your DMA channels communication environment can run properly:
-![](image/91.PNG)
+![](image/91.PNG) 
 Figure 4: running result of “axidma_benchmark”
 
  “axidma_transfer” is another very useful program. Its function is to transfer a file to DMA channel, and receive data from DMA channel as well. It will write the received into a file. like following:
-![](image/92.PNG)
+![](image/92.PNG) 
 Figure 5: usage example of “axidma_transfer”
 you can use "diff" command to check if the received file is total the same as the original file or not.
 
 ## Using this image filter IP
-in this section, you can replace 
+in this section, you can replace the “AXI4-Stream Data FIFO” IP in figure 3 into this "Digital Image Filter" IP. 
+for finishing this task, you should create a new Vivado project first, and add all VHDL files in Root directory, receive_buf, send_buf and sorting_network. and add two block design diagram, "input_buf_top" folder and "block_ram" folder (should add the whole folder). “Generate output products” and “create HDL wrapper” for both block design diagrams. the final project structure is illustrate in the following image:
+![](image/93.PNG) 
+Figure 6: IP source structure 
+and then, package it as a new IP and replce the “AXI4-Stream Data FIFO” IP in figure 3.
 
+## structure and working principle of this image filter IP
+
+Figure 7 shows the basic structure about the Digital Image Filter IP. As this IP core receives data from “AXI DMA” IP and needs to send data back to DMA channel through “AXI DMA” IP as well, Digital Image Filter IP must be compatible with AXI4-stream protocol. “AXI receiver” and “AXI sender” models are responsible for the compatibility.
+
+When DMA channel’s data arrived, “AXI receiver” will setup relevant signals and start to receive DMA data. Necessary DMA data will be extracted by “AXI receiver” and deliver to DATA input BUFFER. “AXI sender” is for transmitting the result. 
+
+The task of “DATA input BUFFER” is to storage at least three lines image pixel data. And distribute those data to Sorting Networks. There are four same “Sorting Network” are used and all working in pipe line. As the DMA data width is 32-bit, which means “DATA input BUFFER” will receive 4 bytes data in each clock cycle during data transmission. But each image pixel has only 3 bytes (red, green and blue). To make sure the system can run in highest speed, one extra Sorting Network is used.
+
+Figure 8 shows the basic working principle about “DATA input BUFFER”. If the extra Sorting network has been used, then the next operation will be like Figure 9. After the operation of the third line of input image, the fourth line data of image will go to the first line storage place in “DATA input BUFFER”, and so on. Figure 10 is an example. 
+
+The output of Sorting Networks’ data will go to an output FIFO. This FIFO will receive and assemble those 8-bit data, deliver them to “AXI sender” in 32-bit format.
+
+![](image/1.PNG) 
+Figure 7: basic structure about the image filter IP core
+
+![](image/24.PNG) 
+Figure 8:
+
+![](image/25.PNG) 
+Figure 9:
+
+![](image/26.PNG) 
+Figure 10:
 
 # LICENSE
 
