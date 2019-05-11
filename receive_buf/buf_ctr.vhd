@@ -683,7 +683,7 @@ begin
                 sig_buf_add_0 <= 0;
             else
                 sig_buf_add_obs_0 <= sig_buf_add_obs;
-                sig_buf_add_0 <= sig_buf_add_obs;
+                sig_buf_add_0 <= sig_buf_add;
             end if;
         end if;
     end process;
