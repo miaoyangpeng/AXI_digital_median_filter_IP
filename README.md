@@ -1,5 +1,6 @@
 # AXI_digital_median_filter_IP
 
+## Overview
 it is an image filter IP core based on Xilinx ZYNQ SOC, Using hardware 3x3 median filter to eliminate image salt-and-pepper noise without CPU involvement. 
 
 a possible usage diagram can be as following, and this design is the "Digital Image Filter" model in the following diagram
@@ -8,6 +9,8 @@ a possible usage diagram can be as following, and this design is the "Digital Im
 Figure 1: overview diagram of final system
 
 Processing System (PS) side is reponsible to transmit and receive image data via DMA channels. A hardware digital image filter is done in Programmable Logic (PL) side. Direct memory access (DMA) channels are established for high speed data exchange between PS side and PL side. 
+
+## Establishing DMA channels communication environment
 
 for establishing a environment for this IP code,first of all, we can use “AXI4-Stream Data FIFO” IP (provided by Vivado) to replace this IP, to check DMA channels. we must make sure DMA channels (read and write) can run properly first, then replace the “AXI4-Stream Data FIFO” IP into this median filter IP.
 so, privious diagram can be changed into following diagram first
@@ -40,9 +43,18 @@ it also explains how to make necessary files, especially it explains the device 
 
 a chinese website : https://blog.csdn.net/long_fly/article/details/80482248  also very useful. it explains how to establish Linux OS in PS side and how to use the DMA channel driver and example in (Link 1) step by step, very easy to understand.
 
-until now, if you can use the "axidma_benchmark" in (Link 1) and get the result similar with following:
+until now, if you can use the "axidma_benchmark" in (Link 1) and get the result similar with following result, means your DMA channels communication environment can run properly:
 ![](image/91.PNG)
 Figure 4: running result of “axidma_benchmark”
+
+ “axidma_transfer” is another very useful program. Its function is to transfer a file to DMA channel, and receive data from DMA channel as well. It will write the received into a file. like following:
+![](image/92.PNG)
+Figure 5: usage example of “axidma_transfer”
+you can use "diff" command to check if the received file is total the same as the original file or not.
+
+## Using this image filter IP
+in this section, you can replace 
+
 
 # LICENSE
 
