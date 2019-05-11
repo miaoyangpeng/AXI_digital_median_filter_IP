@@ -21,7 +21,7 @@ the diagram will looks like following:
 ![](image/77.PNG)
 Figuire 3:hardware diagram in Vivado
 
-I am not going to talk about how to establish the environment in PS side. if using Linux OS, the following files are required
+I am not going to talk about how to establish the environment in PS side. But in short, the following files are required:
 •	BOOT.BIN (boot image, contains First Stage Boot Loader (FSBL), bitstream and u-boot.elf)
 •	devicetree.dtb (device tree)
 •	uImage (Linux kernel)
@@ -32,8 +32,36 @@ some useful links:
  https://github.com/Xilinx/linux-xlnx or https://gitlab.pld.ttu.ee/Karl.Janson/xilinx_linux.git
  https://rcn-ee.com/rootfs/eewiki/minfs/
  
- Linux OS is not compulsory, just make sure that you can use PS side to transfer and receive data from DMA channels, that's fine! such as using SDK also possible.
+Linux OS is not compulsory, just make sure that you can use PS side to transfer and receive data with DMA channels, that's fine! such as using SDK is also possible.
  
 for Linux OS, some very good C DMA channel driver and example programs are provide in here :
-https://github.com/bperez77/xilinx_axidma
+https://github.com/bperez77/xilinx_axidma (Link 1)
+it also explains how to make necessary files, especially it explains the device tree.
 
+a chinese website : https://blog.csdn.net/long_fly/article/details/80482248  also very useful. it explains how to establish Linux OS in PS side and how to use the DMA channel driver and example in (Link 1) step by step, very easy to understand.
+
+until now, if you can use the "axidma_benchmark" in (Link 1)
+
+# LICENSE
+
+MIT License
+
+Copyright (c) 2019 miaoyangpeng <miaoyangpeng@gmail.com>
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
