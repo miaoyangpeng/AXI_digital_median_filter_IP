@@ -17,10 +17,23 @@ Figuire 2: diagram of replacing the “Digital Image Filter” IP for checking D
 
 PL side hardware diagram design procedure in Vivado can refer to http://www.fpgadeveloper.com/2014/08/using-the-axi-dma-in-vivado.html
 in “AXI Direct Memory Access” IP setting,	Make sure “Enable Scatter Gather Engine” is checked
+the diagram will looks like following:
+![](image/77.PNG)
+Figuire 3:hardware diagram in Vivado
 
 I am not going to talk about how to establish the environment in PS side. if using Linux OS, the following files are required
 •	BOOT.BIN (boot image, contains First Stage Boot Loader (FSBL), bitstream and u-boot.elf)
 •	devicetree.dtb (device tree)
 •	uImage (Linux kernel)
 •	Linux file system 
+some useful links: 
+ https://github.com/Xilinx/u-boot-xlnx
+ https://github.com/Xilinx/device-tree-xlnx
+ https://github.com/Xilinx/linux-xlnx or https://gitlab.pld.ttu.ee/Karl.Janson/xilinx_linux.git
+ https://rcn-ee.com/rootfs/eewiki/minfs/
+ 
+ Linux OS is not compulsory, just make sure that you can use PS side to transfer and receive data from DMA channels, that's fine! such as using SDK also possible.
+ 
+for Linux OS, some very good C DMA channel driver and example programs are provide in here :
+https://github.com/bperez77/xilinx_axidma
 
