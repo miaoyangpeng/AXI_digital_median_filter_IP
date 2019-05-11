@@ -19,7 +19,7 @@ PL side hardware diagram design procedure in Vivado can refer to http://www.fpga
 in “AXI Direct Memory Access” IP setting,	Make sure “Enable Scatter Gather Engine” is checked
 the diagram will looks like following:
 ![](image/77.PNG)
-Figuire 3:hardware diagram in Vivado
+Figuire 3: hardware diagram in Vivado
 
 I am not going to talk about how to establish the environment in PS side. But in short, the following files are required:
 •	BOOT.BIN (boot image, contains First Stage Boot Loader (FSBL), bitstream and u-boot.elf)
@@ -40,7 +40,9 @@ it also explains how to make necessary files, especially it explains the device 
 
 a chinese website : https://blog.csdn.net/long_fly/article/details/80482248  also very useful. it explains how to establish Linux OS in PS side and how to use the DMA channel driver and example in (Link 1) step by step, very easy to understand.
 
-until now, if you can use the "axidma_benchmark" in (Link 1)
+until now, if you can use the "axidma_benchmark" in (Link 1) and get the result similar with following:
+![](image/91.PNG)
+Figure 4: running result of “axidma_benchmark”
 
 # LICENSE
 
