@@ -6,6 +6,8 @@
 -- It gets control signals from "DATA receive BUFFER controller", 
 -- takes necessary data from "Block RAM array", and provides data 
 -- and "filter_en" signal to sorting network.
+-- Bugs:
+-- one known bug, but I don't know how to explain that. 
 ----------------------------------------------------------------------------------
 
 library IEEE;
