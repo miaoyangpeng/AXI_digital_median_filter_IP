@@ -303,7 +303,17 @@ begin
     process(clk)
     begin
         if(rising_edge(clk)) then
-            one_width <= to_integer(unsigned(width)) * 3;
+          
+            if(width(1 downto 0) = "01") then  -- ROW size of .BMP format should be able to devided by 4 bytes
+                one_width <= to_integer(unsigned(width)) * 3 + 1;
+            elsif(width(1 downto 0) = "10") then
+                one_width <= to_integer(unsigned(width)) * 3 + 2;
+            elsif(width(1 downto 0) = "11") then
+                one_width <= to_integer(unsigned(width)) * 3 + 3;
+            else
+                one_width <= to_integer(unsigned(width)) * 3;
+            end if;
+              
             two_width <= one_width + one_width; 
             three_width <= one_width * 3;
         end if;
