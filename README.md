@@ -81,7 +81,9 @@ you can do the cutting header operation by modify “axidma_transfer.c” and "u
 
 ## structure and working principle of this image filter IP
 
-Figure 7 shows the basic structure about the Digital Image Filter IP. As this IP core receives data from “AXI DMA” IP and needs to send data back to DMA channel through “AXI DMA” IP as well, Digital Image Filter IP must be compatible with AXI4-stream protocol. “AXI receiver” and “AXI sender” models are responsible for the compatibility.
+Figure 7 shows the basic structure about the Digital Image Filter IP. 
+
+As this IP core receives data from “AXI DMA” IP and needs to send data back to DMA channel through “AXI DMA” IP as well, Digital Image Filter IP must be compatible with AXI4-stream protocol. “AXI receiver” and “AXI sender” models are responsible for the compatibility.
 
 When DMA channel’s data arrived, “AXI receiver” will setup relevant signals and start to receive DMA data. Necessary DMA data will be extracted by “AXI receiver” and deliver to DATA input BUFFER. “AXI sender” is for transmitting the result. 
 
@@ -93,6 +95,12 @@ The output of Sorting Networks’ data will go to an output FIFO. This FIFO will
 
 ![](image/1.PNG) 
 Figure 7: basic structure about the image filter IP core
+
+"AXI receiver" corresponding to the file "Filter_receive.vhd" in root directory 
+"AXI sender" corresponding to the file "Filter_send.vhd" in root directory
+"DATA input BUFFER"contains all files in folder "receive_buf" and the block design in folder "input_buf_top"
+"DATA output FIFO" contains the file in folder "send_buf" and the block design in folder "block_ram"
+"Sorting network" contains all files in folder "sorting_network"
 
 ![](image/24.PNG) 
 Figure 8: working principle of “DATA input BUFFER”
