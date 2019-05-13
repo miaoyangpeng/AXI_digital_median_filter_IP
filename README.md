@@ -96,11 +96,11 @@ The output of Sorting Networks’ data will go to an output FIFO. This FIFO will
 ![](image/1.PNG) 
 Figure 7: basic structure about the image filter IP core
 
-"AXI receiver" corresponding to the file "Filter_receive.vhd" in root directory 
-"AXI sender" corresponding to the file "Filter_send.vhd" in root directory
-"DATA input BUFFER"contains all files in folder "receive_buf" and the block design in folder "input_buf_top"
-"DATA output FIFO" contains the file in folder "send_buf" and the block design in folder "block_ram"
-"Sorting network" contains all files in folder "sorting_network"
+- "AXI receiver" corresponding to the file "Filter_receive.vhd" in root directory 
+- "AXI sender" corresponding to the file "Filter_send.vhd" in root directory
+- "DATA input BUFFER"contains all files in folder "receive_buf" and the block design in folder "input_buf_top"
+- "DATA output FIFO" contains the file in folder "send_buf" and the block design in folder "block_ram"
+- "Sorting network" contains all files in folder "sorting_network"
 
 ![](image/24.PNG) 
 Figure 8: working principle of “DATA input BUFFER”
